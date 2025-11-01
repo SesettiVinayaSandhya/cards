@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Light</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .traffic-light {
+            background-color: lightblue;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 20%;
+            
+            margin-left: 90px;
+        }
+        .light {
+            width: 50px;
+            height: 150px;
+            background-color: #333;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            margin: auto;
+            margin-right: 10px;
+            
+        }
+        .light div {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: gray;
+        }
+        .light div.green {
+            background-color: green;
+        }
+        button {
+            margin: 10px;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .sa{
+           margin-top: -150px;
+           margin-left: -130px;
+        }
+        .bh{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="traffic-light">
+        <h2>Traffic Light</h2>
+        <div class="light">
+            <div id="red"></div>
+            <div id="yellow"></div>
+            <div id="green" class="green"></div>
+        </div>
+        <div class="sa">
+        <button class="bh" onclick="stop()">Stop</button><br>
+        <button class="bh" onclick="ready()">Ready</button><br>
+    
+        <button class="bh" onclick="go()">Go</button>
+        </div>
+    </div>
+
+    <script>
+        function stop() {
+            document.getElementById('red').style.backgroundColor = 'red';
+            document.getElementById('yellow').style.backgroundColor = 'gray';
+            document.getElementById('green').style.backgroundColor = 'gray';
+        }
+        function ready() {
+            document.getElementById('red').style.backgroundColor = 'gray';
+            document.getElementById('yellow').style.backgroundColor = 'yellow';
+            document.getElementById('green').style.backgroundColor = 'gray';
+        }
+        function go() {
+            document.getElementById('red').style.backgroundColor = 'gray';
+            document.getElementById('yellow').style.backgroundColor = 'gray';
+            document.getElementById('green').style.backgroundColor = 'green';
+        }
+    </script>
+</body>
+</html>
